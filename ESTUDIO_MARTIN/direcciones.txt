@@ -1,0 +1,67 @@
+http://www.youtube.com/playlist?list=PLoDZ1mRwCXTZUucL7QH9Zg2kEX47vK5rb
+https://www.youtube.com/watch?v=qJAGgT70p6o
+http://the-geek.org/django-book/chapter1/
+http://blackhold.nusepas.com/2009/10/arrancando-django-y-primer-script/
+https://drive.google.com/folderview?id=0B-jqGIKG1Mh4U0dDcC0xZk84Mlk&usp=sharing
+http://youtu.be/LW1pAgKf4Eg
+https://apokalyptica79.wordpress.com/2013/08/06/escribiendo-tu-primera-aplicacion-app-django-parte-1-traduccion/
+https://axeliux.wordpress.com/2014/01/21/creando-la-aplicacion-de-preguntasrespuestas-con-django/
+
+VERIFICAR QUE DJANGO ESTA INSTALADO
+DESDE LA CONSOLA python
+>>> 
+
+**COMANDOS
+CREAR UN PROYECTO
+django-admin.py startproject nombre_proyecto
+creara la estructura de directorios
+desde donde este manage.py 
+correemos el servidor.
+CORRER EL SERVIDOR
+Desde dentro de la carpeta-->nombre_proyecto
+python manage.py runserver
+se puede pasar por parametro la url y el puerto
+ejemplo: python manage.py runserver 0.0.0.0:8000
+CONFIGURAR LA BASE DE DATOS
+se entra en el directorio nombre_proyecto se busca settings.py
+y donde dice DATABASES se coloca la direccion donde va estar la BASE DE DATOS.
+EJEMPLO:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/Python27/recetario/miprimerproyecto/basedatos.sqlite',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+
+SINCRONIZAR LA BASE DE DATOS
+python manage.py syncdb
+SINCRONIZAR LOS MODELOS DE LA APLICACION
+python manage.py makemigrations preguntasyrespuestas (actualiza las tablas)
+python manage.py sqlmigrate preguntasyrespuestas 0002 (le muestra el sql de las tablas el 002 es el codigo de migracion.)
+
+
+
+CREAR UNA APLICACION
+python manage.py startapp 
+
+
+from django.db import models
+
+ 
+class Pregunta(models.Model):
+    asunto = models.CharField(max_length=200)
+    descripcion = models.TextField()
+    fecha_publicacion = models.DateTimeField(auto_now_add=True)
+
+
+class Respuesta(models.Model):
+    Pregunta = models.ForeignKey(Pregunta)
+    contenido = models.TextField()
+    mejor_respuesta = models.BooleanField("Respuesta preferida", default=False)
+
+
+
+ 
