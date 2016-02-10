@@ -33,4 +33,6 @@ git push origin master
 
 *para crear una rama y quedar dentro de ella
 git checkout -b nombre_rama
+checkout sirve para cambiar entre ramas similar al cd en DOS.
+
 
