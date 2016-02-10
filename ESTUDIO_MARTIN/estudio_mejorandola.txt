@@ -1,7 +1,17 @@
+******CLASE DE GIT ************
+
 https://github.com/ARGOSYSCOM/proyecto1/settings
 usuario: martinargoty
 password: 4108nicolam
 
+*para crear un repositorio por primera vez
+ git remote add origin https://github.com/ARGOSYSCOM/proyecto1.git
+
+*adiciona todo locamente
 git add -A
+
+*graba
 git commit
+
+*manda cambios al servidor
 git push origin master
