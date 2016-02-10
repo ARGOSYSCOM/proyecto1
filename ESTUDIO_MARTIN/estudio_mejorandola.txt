@@ -16,8 +16,11 @@ git add -A
 *graba
 git commit
 
-*sale un archivo para colocar observaciones sobre el cambio
-*Se modifica el tx y con este comando se sale y graba--> [ESCAPE]:wq
+*tan pronto se da este comando aparece un txt.
+*para uno registrar observaciones en el servidor.
+*con la letra I se inserta
+*para grabar y salir este comando [ESCAPE] wq
+
 
 *manda cambios al servidor
 git push origin master
