@@ -7,6 +7,9 @@ password: 4108nicolam
 *para crear un repositorio por primera vez
  git remote add origin https://github.com/ARGOSYSCOM/proyecto1.git
 
+*directorio en el cual estoy trabajando
+  cd C:/Users/martin.argoty/Desktop/proyecto1
+
 *adiciona todo locamente
 git add -A
 
