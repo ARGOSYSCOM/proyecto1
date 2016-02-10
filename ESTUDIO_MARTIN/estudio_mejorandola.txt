@@ -25,6 +25,12 @@ git commit
 *manda cambios al servidor
 git push origin master
 
+*aparecera el usuario del servidor del respositorio en este caso
+*es martinargoty
+*password: 4108nicolam
+
+
+
 *para crear una rama y quedar dentro de ella
 git checkout -b nombre_rama
 
