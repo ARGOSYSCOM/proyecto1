@@ -16,5 +16,8 @@ git add -A
 *graba
 git commit
 
+*sale un archivo para colocar observaciones sobre el cambio
+*Se modifica el tx y con este comando se sale y graba--> [ESCAPE]:wq
+
 *manda cambios al servidor
 git push origin master
